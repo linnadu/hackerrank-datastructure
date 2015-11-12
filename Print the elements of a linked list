@@ -1,0 +1,23 @@
+class Node(object):
+ 
+    def __init__(self, data=None, next_node=None, prev_node=None):
+        self.data = data
+        self.next = next_node
+    
+
+n=int(raw_input().strip())
+m=int(raw_input().strip())
+for _ in range(n):
+    q=int(raw_input().strip())
+    data=map(int, raw_input().strip().split())
+    for i in range(q):
+        if i ==0:
+            head=Node(data[i])
+            print head.data
+        else:
+            node1=Node(data[i])
+            head.next=node1
+            print node1.data
+ 
+  
+  
